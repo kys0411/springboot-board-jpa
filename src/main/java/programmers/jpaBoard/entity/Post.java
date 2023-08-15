@@ -44,7 +44,12 @@ public class Post extends BaseEntity {
     }
 
     public void updatePost(String title, String content) {
-        this.title = title;
-        this.content = content;
+        if (title != null) {
+            this.title = title;
+        }
+
+        if (content != null) {
+            this.content = content;
+        }
     }
 }
